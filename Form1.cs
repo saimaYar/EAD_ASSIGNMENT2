@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +19,9 @@ namespace PRACTICE_EAD
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("welcome");
+            this.Hide();
+            newUserForm ff = new newUserForm();
+            ff.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
