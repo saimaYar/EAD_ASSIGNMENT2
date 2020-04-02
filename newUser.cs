@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,6 +48,27 @@ namespace PRACTICE_EAD
         }
 
         private void sports_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(dateTimePicker1.Value.ToShortDateString());
+            MessageBox.Show(dateTimePicker1.Value.ToShortTimeString());
+        }
+
+        private void upload_Click(object sender, EventArgs e)
+        {
+            var result = openFileDialog1.ShowDialog();
+            if(result==System.Windows.Forms.DialogResult.OK)
+            {
+                string file = openFileDialog1.FileName;
+                pictureBox1.Load(file);
+            }
+        }
+
+        private void cnicNo_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }
