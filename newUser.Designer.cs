@@ -1,4 +1,4 @@
-﻿namespace PRACTICE_EAD
+namespace PRACTICE_EAD
 {
     partial class newUserForm
     {
@@ -53,6 +53,7 @@
             this.createbtn = new System.Windows.Forms.Button();
             this.cancelbtn = new System.Windows.Forms.Button();
             this.cnicNo = new System.Windows.Forms.MaskedTextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ageBox)).BeginInit();
             this.SuspendLayout();
@@ -134,7 +135,7 @@
             // 
             this.age.AutoSize = true;
             this.age.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.age.Location = new System.Drawing.Point(62, 298);
+            this.age.Location = new System.Drawing.Point(62, 294);
             this.age.Name = "age";
             this.age.Size = new System.Drawing.Size(37, 18);
             this.age.TabIndex = 7;
@@ -193,10 +194,10 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(418, 43);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(123, 123);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
@@ -210,6 +211,7 @@
             this.upload.TabIndex = 17;
             this.upload.Text = "Upload";
             this.upload.UseVisualStyleBackColor = false;
+            this.upload.Click += new System.EventHandler(this.upload_Click);
             // 
             // genderText
             // 
@@ -246,6 +248,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 21;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // cricketbox
             // 
@@ -292,6 +295,7 @@
             this.createbtn.TabIndex = 25;
             this.createbtn.Text = "Create";
             this.createbtn.UseVisualStyleBackColor = false;
+            this.createbtn.Click += new System.EventHandler(this.createbtn_Click);
             // 
             // cancelbtn
             // 
@@ -303,15 +307,25 @@
             this.cancelbtn.TabIndex = 26;
             this.cancelbtn.Text = "Cancel";
             this.cancelbtn.UseVisualStyleBackColor = false;
+            this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
             // 
             // cnicNo
             // 
+            this.cnicNo.Culture = new System.Globalization.CultureInfo("nb-NO");
             this.cnicNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.cnicNo.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.cnicNo.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Overwrite;
             this.cnicNo.Location = new System.Drawing.Point(124, 323);
-            this.cnicNo.Mask = "     :      :";
+            this.cnicNo.Mask = "00000_0000000_0";
             this.cnicNo.Name = "cnicNo";
             this.cnicNo.Size = new System.Drawing.Size(167, 24);
             this.cnicNo.TabIndex = 27;
+            this.cnicNo.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.cnicNo_MaskInputRejected);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "JPG | *.jpg";
             // 
             // newUserForm
             // 
@@ -382,5 +396,6 @@
         private System.Windows.Forms.Button createbtn;
         private System.Windows.Forms.Button cancelbtn;
         private System.Windows.Forms.MaskedTextBox cnicNo;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
