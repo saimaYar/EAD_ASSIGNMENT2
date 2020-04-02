@@ -72,5 +72,18 @@ namespace PRACTICE_EAD
         {
 
         }
+        private void cancelbtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 obj = new Form1();
+            obj.Show();
+        }
+
+        private void createbtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home hom = new Home();
+            hom.Show();
+        }
     }
 }
