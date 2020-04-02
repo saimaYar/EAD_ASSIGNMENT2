@@ -1,4 +1,4 @@
-﻿namespace PRACTICE_EAD
+namespace PRACTICE_EAD
 {
     partial class Form1
     {
