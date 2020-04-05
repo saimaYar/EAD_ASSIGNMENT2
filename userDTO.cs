@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PRACTICE_EAD
+namespace PMS.entities
 {
-    class userDto
+    public class userDTO
     {
         public int id { get; set; }
         public string name { get; set; }
@@ -23,8 +23,5 @@ namespace PRACTICE_EAD
         public string image { get; set; }
         public string email { get; set; }
 
-
-
-       
     }
 }
