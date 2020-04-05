@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PRACTICE_EAD
 {
-    class userDTO
+    class userDto
     {
         public int id { get; set; }
         public string name { get; set; }
