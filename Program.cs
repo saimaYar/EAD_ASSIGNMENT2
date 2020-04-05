@@ -16,6 +16,16 @@ namespace PRACTICE_EAD
         static void Main()
         {
             DAL obj = new DAL();
+            var dt = new PMS.entities.adminDTO();
+            dt.id = 1;
+            dt.name = "sadaf";
+            dt.login = "sadaf";
+           dto.password = "123";
+            PMS.BAL.adminBO.save(dto);
+            var data=PMS.BAL.adminBO.GetAllUser();
+           var del= PMS.BAL.adminBO.delete(1);
+            var prod=PMS.BAL.adminBO.GetUserById(1);
+            
             var dto = new PMS.entities.userDTO();
             dto.id = 1;
             dto.name = "saima";
