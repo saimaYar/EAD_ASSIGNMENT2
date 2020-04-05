@@ -27,7 +27,22 @@ namespace PRACTICE_EAD
             dto.age = 20;
             dto.nic = "123";
             dto.dob = DateTime.Now.AddYears(-33);
-            dto.email = "saima@gmail.com";
+            dto.email ="EAD.SEMorning@gmail.com";
+             String toAddress = "EAD.SEMorning@gmail.com";
+            String subject = "Email Testing";
+            String body = "Code: 123451";
+
+            Boolean result = EmailHandler.SendEmail(toAddress, subject, body);
+
+            if (result == false)
+            {
+                Console.WriteLine("Unable to send email");
+            }
+            else
+            {
+                Console.WriteLine("Email Sent!");
+            }
+
             // var id=obj.save2(dto);
             PMS.BAL.userBO.save(dto);
             var data=PMS.BAL.userBO.GetAllUser();
