@@ -21,12 +21,26 @@ namespace PRACTICE_EAD
         {
             this.Hide();
             newUserForm ff = new newUserForm();
-            ff.Show();
+            ff.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            newUserForm ff = new newUserForm();
+            ff.ShowDialog();
+        }
 
+        private void adminBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            admin ff = new admin();
+            ff.ShowDialog();
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
